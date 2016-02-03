@@ -1,77 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Rackt</title>
-  <style media="screen">
+  <head>
+    <title>rackt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
     body {
-      background: white;
+      font: 14px Helvetica, sans-serif;
+      line-height: 1.5;
+      padding: 5px 20px;
     }
-
-    #rackt {
-      font: bold 120px sans-serif;
+    @media all and (min-width: 660px) {
+      body {
+        padding: 50px 20px;
+      }
+    }
+    #wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    header {
       text-align: center;
-      color: white;
-      margin: 0;
     }
-  </style>
-</head>
-<body>
-  <h1 id="rackt">Rackt</h1>
-  <script type="text/javascript">
-    var colorTime = 0,
-        waveTheta = 0,
-        maxCount = 100,
-        colorIncrement = -12,
-        waveIncrement = 0.1,
-        xPos = [ -2, -1, 0, 1, 2 ],
-        yPos = [ -2, -1, 0, 1, 2 ],
-        props = {};
+    code {
+      background: #eee;
+    }
+    </style>
+  </head>
+  <body>
+    <section id="wrapper">
+      <header>
+        <h1>rackt</h1>
+      </header>
 
-    var getTextShadow = function( x, y, hue ) {
-      return ', ' + x + 'px ' + y + 'px hsl(' + hue + ', 100%, 50%)';
-    };
+      <p>rackt is a GitHub organization that was created to ensure critical open source projects in the <a href="https://facebook.github.io/react/">React</a> community receive long-term support and maintenance. It is a place where:</p>
 
-    var animate = function() {
-      var shadows = '0 0 transparent',
-          hue0 = colorTime % 360,
-          i, j, x, y,
-          iLen = xPos.length,
-          jLen = yPos.length;
+      <ul>
+        <li>
+          <p>Open source project authors can get help with support and maintenance</p>
+        </li>
+        <li>
+          <p>Consumers of the software are also its maintainers</p>
+        </li>
+        <li>
+          <p>Originators can leave a project when they no longer can or want to help maintain it</p>
+        </li>
+        <li>
+          <p>Companies do not own or control the software</p>
+        </li>
+      </ul>
 
-      // outline
-      for ( i = 0; i < iLen; i++ ) {
-        x = xPos[i];
-        for ( j = 0; j < jLen; j++ ) {
-          y = yPos[j];
-          shadows += getTextShadow( x, y, hue0 );
-        }
-      }
+      <h2>Why?</h2>
 
-      // renders rainbow river
-      for ( i = 1; i < maxCount; i++ ) {
-        var normI = i / maxCount,
-            hue = ( normI * 360 * 2 + colorTime ) % 360;
-        x = ~~( ( Math.sin( normI * Math.PI * 2 + waveTheta ) - Math.sin( waveTheta ) )  * 50 );
-        y = i * 3;
-        shadows += getTextShadow( x, y, hue );
-      }
+      <p>Open source can be a double-edged sword. Typically, open source software is provided free of charge to the consumer. It's great for the obvious reasons, but also because providing quality software for free is a great way to attract others who can help stomp out bugs and drive further development. On the other hand, working with open source software comes with some significant risks.</p>
+      <p>One of the major risks that we've seen time and time again is that authors and maintainers of popular open source projects experience "burn out". This can have broad negative consequences for the project, but it is also a significant negative consequence for the author. The work they do can be a source of lasting satisfaction and meaningful contribution in their lives. Burn out robs them of that opportunity and makes their work much less enjoyable.</p>
+      <p>Even if they don't experience burn out, open source project authors may eventually become disillusioned with the project and/or technology and effectively leave. In either case, if no one is around to maintain their work everyone who built their business on it is put into a difficult position: either migrate to something new or assume ownership of the project to ensure it continues to meet the needs of the business; a significant responsibility.</p>
+      <p>Even if a company assumes ownership of some open source work, usually the methods of managing that project and moving it forward end up changing significantly. This may not always be in the best interest of others who depended on that work.</p>
+      <p>Clearly, we need a sustainable way to build and maintain open source software for the good of the JavaScript community, while providing a reasonable degree of confidence to our consumers that the software won't be abandoned or completely controlled by a corporation at some point in the future.</p>
 
-      props.groovy.style.textShadow = shadows;
-      colorTime += colorIncrement;
-      waveTheta += waveIncrement;
-      setTimeout( animate, 30 );
-    };
+      <h2>How can I help?</h2>
 
-    var init = function() {
+      <p>You don't need anyone's approval or permission to start helping out with a rackt project. Just join in the conversations that are already happening on the issue tracker and on Discord. Or start a new conversation. It's up to you.</p>
+      <p>If you aren't sure where to start and you'd like some direction, try contacting the person who is a lead on the project. There is no "core team"; each project usually has multiple leads. You can see who they are by looking at contributor summaries and, probably more importantly, the recent commit history. Anyone who is regularly pushing code and/or merging pull requests is a project lead. They are designated by the work they do, not by some higher authority.</p>
 
-      props.groovy = document.getElementById('rackt');
+      <h2>Contact</h2>
 
-      setTimeout( animate, 1 );
+      <p>If you'd like to contact us, please reach out to <a href="https://twitter.com/mjackson" target="_blank">@mjackson</a>, <a href="https://twitter.com/ryanflorence" target="_blank">@ryanflorence</a>, or <a href="https://twitter.com/dan_abramov" target="_blank">@dan_abramov</a> on Twitter.</p>
 
-    };
-
-    window.addEventListener( 'DOMContentLoaded', init, false);
-  </script>
-</body>
+    </section>
+  </body>
 </html>
