@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>rackt</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>rackt</title>
     <style>
     body {
       font: 14px Helvetica, sans-serif;
@@ -21,8 +22,16 @@
     header {
       text-align: center;
     }
-    code {
-      background: #eee;
+    h2 a:link, h2 a:visited,
+    h3 a:link, h3 a:visited {
+      color: black;
+      text-decoration: none;
+    }
+    a:link:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 2em;
     }
     </style>
   </head>
@@ -32,40 +41,67 @@
         <h1>rackt</h1>
       </header>
 
-      <p>rackt is a GitHub organization that was created to ensure critical open source projects in the <a href="https://facebook.github.io/react/">React</a> community receive long-term support and maintenance. It is a place where:</p>
+      <p>Rackt is <a href="https://github.com/rackt">a GitHub organization</a> that was created to ensure critical open source projects in the React community receive long-term support and maintenance.</p>
 
+      <h2><a id="principles" href="#principles">Principles</a></h2>
+      <p>We believe these four principles will provide a strong ecosystem of our open source projects by ensuring projects have active and enthusiastic owners and contributors.</p>
+
+      <h3><a id="consumers-are-contributors" href="#consumers-are-contributors">1) Consumers are Contributors</a></h3>
+      <p>When you start a new job, you assume responsibility for the code base.  When you, or somebody before you, imports a Rackt lib, you have that same responsibility. We are building this stuff together. There is no “core team”.  If you use our code, it is now <em>our</em> code. (Get it?!)</p>
+      <p>Collaborators are added liberally by other owners and/or collaborators. They need only contribute some non-trivial commits and follow the Code of Conduct (TODO: link needed).</p>
+      <p>This also means contributors should be consumers. If an owner finds they are not using a project in the real-world, they should reconsider their involvement with the project.</p>
+
+      <h3><a id="ownership-is-temporary" href="#ownership-is-temporary">2) Ownership is Temporary</a></h3>
+      <p>When you leave a job, nobody expects you to continue to maintain all the code you wrote while at that job. If the business falls apart by your absence, there’s a problem with the business.</p>
+      <p>Before a project joins Rackt, it should have some significant usage in the community and multiple owners so that a major contributor’s absence does not critically injure the project. If it has significant usage but only one or two owners, new owners should be added as soon as possible.</p>
+      <p>Becoming an owner should not come with the pressure to maintain the project for longer than you have interest. This should encourage people to accept ownership, even if for a short time.</p>
+      <p>Owners of Rackt projects can stop working on them without any guilt or explanation, just like a job.  If this makes you uncomfortable, you can either not use Rackt projects or, preferably, increase your organizations investment in open source and dedicate some time to helping with maintainence. If you use our code, it is now <em>our</em> code. (Get it yet?)</p>
+
+      <h3><a id="os-license" href="#os-license">3) Code has Non-Profit Ownership, MIT/ISC License</a></h3>
+      <p>Code on Rackt must be owned by a non-profit and have the <a href="https://opensource.org/licenses/MIT">MIT</a> or <a href="https://opensource.org/licenses/ISC">ISC</a> license. This ensures that the owners of a project can continue to maintain it regardless of corporate acquisitions and bureaucracy.</p>
+
+      <h3><a id="avoid-burnout" href="#avoid-burnout">4) Avoid Burnout</a></h3>
+      <p>The first priority in managing the issue tracker for a Rackt project is avoiding burnout. Sprawling lists of inactionable, open issues, is burnout’s most potent fuel.</p>
+
+      <p>This means:</p>
       <ul>
         <li>
-          <p>Open source project authors can get help with support and maintenance</p>
+          <p>Bug reports without test cases (copy/paste-able code is enough) can be closed with or without comment.</p>
         </li>
         <li>
-          <p>Consumers of the software are also its maintainers</p>
+          <p>Usage questions can be closed immediately and directed to stack overflow. Owners should pay attention though, because the docs or the APIs probably need help if there are a lot of “question issues”.</p>
         </li>
         <li>
-          <p>Originators can leave a project when they no longer can or want to help maintain it</p>
+          <p>Feature requests without thoughtful commentary and sample code can be closed with or without comment.</p>
         </li>
         <li>
-          <p>Companies do not own or control the software</p>
+          <p>Issues without activity in the last 30 days can be closed with or without comment. If this is a bug you care about that isn’t getting attention, fix it. If you’re good enough to understand the bug, you’re good enough to fix it. Remember, it’s <em>our</em> code now.</p>
         </li>
       </ul>
 
-      <h2>Why?</h2>
+      <h2><a id="gather-responsibility" href="#gather-responsibility">Gather Responsibility</a></h2>
+      <p>If you have imported a Rackt lib, you can gather responsibility and be a contributor in a number of ways:</p>
+      <ol>
+        <li>
+          <p>Answer questions on stack overflow</p>
+        </li>
+        <li>
+          <p>Add test cases to bug reports</p>
+        </li>
+        <li>
+          <p>Add fixes for test cases</p>
+        </li>
+        <li>
+          <p>Write up thoughtful feature requests with sample usage</p>
+        </li>
+        <li>
+          <p>Close issues that qualify for closing (see <a href="#avoid-burnout">Avoid Burnout</a>)</p>
+        </li>
+      </ol>
 
-      <p>Open source can be a double-edged sword. Typically, open source software is provided free of charge to the consumer. It's great for the obvious reasons, but also because providing quality software for free is a great way to attract others who can help stomp out bugs and drive further development. On the other hand, working with open source software comes with some significant risks.</p>
-      <p>One of the major risks that we've seen time and time again is that authors and maintainers of popular open source projects experience "burn out". This can have broad negative consequences for the project, but it is also a significant negative consequence for the author. The work they do can be a source of lasting satisfaction and meaningful contribution in their lives. Burn out robs them of that opportunity and makes their work much less enjoyable.</p>
-      <p>Even if they don't experience burn out, open source project authors may eventually become disillusioned with the project and/or technology and effectively leave. In either case, if no one is around to maintain their work everyone who built their business on it is put into a difficult position: either migrate to something new or assume ownership of the project to ensure it continues to meet the needs of the business; a significant responsibility.</p>
-      <p>Even if a company assumes ownership of some open source work, usually the methods of managing that project and moving it forward end up changing significantly. This may not always be in the best interest of others who depended on that work.</p>
-      <p>Clearly, we need a sustainable way to build and maintain open source software for the good of the JavaScript community, while providing a reasonable degree of confidence to our consumers that the software won't be abandoned or completely controlled by a corporation at some point in the future.</p>
-
-      <h2>How can I help?</h2>
-
-      <p>You don't need anyone's approval or permission to start helping out with a rackt project. Just join in the conversations that are already happening on the issue tracker and on Discord. Or start a new conversation. It's up to you.</p>
-      <p>If you aren't sure where to start and you'd like some direction, try contacting the person who is a lead on the project. There is no "core team"; each project usually has multiple leads. You can see who they are by looking at contributor summaries and, probably more importantly, the recent commit history. Anyone who is regularly pushing code and/or merging pull requests is a project lead. They are designated by the work they do, not by some higher authority.</p>
-
-      <h2>Contact</h2>
-
-      <p>If you'd like to contact us, please reach out to <a href="https://twitter.com/mjackson" target="_blank">@mjackson</a>, <a href="https://twitter.com/ryanflorence" target="_blank">@ryanflorence</a>, or <a href="https://twitter.com/dan_abramov" target="_blank">@dan_abramov</a> on Twitter.</p>
-
+      <footer>
+        <p>Rackt is <strong>not</strong> an exclusive club. Help us push the web forward and get involved.</p>
+      </footer>
     </section>
   </body>
 </html>
